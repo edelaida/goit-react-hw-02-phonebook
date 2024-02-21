@@ -1,0 +1,15 @@
+.text {
+  font-size: large;
+}
+.item {
+  display: flex;
+  gap: 10px;
+}
+.list {
+  width: 800px;
+  border-radius: 1px;
+}
+.btnn {
+  background-color: aqua;
+  padding: 30px, 5px;
+}

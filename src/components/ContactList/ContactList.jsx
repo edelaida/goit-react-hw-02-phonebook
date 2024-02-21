@@ -1,27 +1,18 @@
 import React from 'react';
 import s from './ContactList.module.css';
 
-export const ContactList = ({ list, deleteList, filter }) => {
+export const ContactList = ({ list, onDeleteList }) => {
   return (
-    <>
-      {list
-        .filter(person => {
-          return person.name.includes(filter);
-        })
-        .map(person => {
-          return (
-            <div key={person.id}>
-              <p>{person.name}</p>
-              <p>{person.number}</p>
-              <button onClick={() => deleteList(person.id)}>Delete</button>
-            </div>
-          );
-        })}
-      <p className={s.list}>List</p>
-    </>
+    <ul className={s.list}>
+      {list.map(({ id, name, number }) => (
+        <li className={s.item} key={id}>
+          <p className={s.text}>{name}</p>
+          <p className={s.text}>{number}</p>
+          <button className={s.btnn} onClick={() => onDeleteList(id)}>
+            Delete
+          </button>
+        </li>
+      ))}
+    </ul>
   );
 };
-
-// export default function ContactList() {
-//   return <div>ContactList</div>;
-// }
