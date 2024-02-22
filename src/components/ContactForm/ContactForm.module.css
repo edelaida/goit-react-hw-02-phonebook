@@ -1,11 +1,11 @@
-/* style={{
-    height: '100vh',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontSize: 40,
-    color: '#010101',
-  }} */
 .block {
   padding-left: 40px;
+}
+input {
+  font-size: medium;
+}
+.btnAdd {
+  margin-top: 20px;
+  padding: 5px 15px;
+  font-size: medium;
 }

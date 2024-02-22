@@ -36,13 +36,9 @@ export class App extends React.Component {
       contacts: prevState.contacts.filter(contact => contact.id !== nameId),
     }));
   };
-  // if (contacts.some(contact => contact.name === name)) (
-  //   alert(`$(data.name) is alredy in contacts`)
-  // return;
-  // )
 
   handleSubmitInput = data => {
-    this.contacts.some(elem => elem === data.name)
+    this.state.contacts.some(elem => elem.name === data.name)
       ? alert(`${data.name} is alredy in contacts`)
       : this.setState(prevState => {
           return {
@@ -75,9 +71,7 @@ export class App extends React.Component {
     const filterPerson = this.handleVisibleForm();
     return (
       <div>
-        <h1>Phonebook</h1>
         <ContactForm onSubmit={this.handleSubmitInput} />
-        <h2>Contacts</h2>
         <Filter value={filter} onChange={this.handleFilter} />
         <ContactList list={filterPerson} onDeleteList={this.handleDelete} />
       </div>

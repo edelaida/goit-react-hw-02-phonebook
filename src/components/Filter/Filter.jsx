@@ -1,10 +1,10 @@
 import React from 'react';
-import s from './Filter.modules.css';
+import s from './Filter.module.css';
 
 export const Filter = ({ value, onChange }) => {
   return (
-    <div>
-      <p>Filter</p>
+    <div className={s.blk}>
+      <h4>Filter</h4>
       <input
         className={s.fltr}
         value={value}

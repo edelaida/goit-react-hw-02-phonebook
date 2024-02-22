@@ -1,15 +1,28 @@
+.title {
+  padding-left: 40px;
+}
+
 .text {
-  font-size: large;
+  font-size: 16px;
 }
 .item {
   display: flex;
   gap: 10px;
-}
-.list {
-  width: 800px;
-  border-radius: 1px;
+  width: 300px;
+  padding: 5px 20px;
+  box-shadow: 2px 2px 3px 2px rgb(223, 218, 218);
 }
 .btnn {
-  background-color: aqua;
-  padding: 30px, 5px;
+  background-color: rgb(175, 177, 177);
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
+/* style={{
+    height: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: 40,
+    color: '#010101',
+  }} */

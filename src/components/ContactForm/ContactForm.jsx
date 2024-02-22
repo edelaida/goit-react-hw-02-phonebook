@@ -14,7 +14,7 @@ export class ContactForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.onSubmit({ name: this.state.name, number: this.state.number });
+    this.props.onSubmit(this.state);
     this.reset();
   };
 
@@ -26,10 +26,11 @@ export class ContactForm extends React.Component {
     const { name, number } = this.state;
     return (
       <div className={s.block}>
+        <h1>Phonebook</h1>
         <form onSubmit={this.handleSubmit}>
           <p>Name</p>
           <input
-            valuie={name}
+            value={name}
             type="text"
             name="name"
             onChange={this.handleChange}
@@ -43,7 +44,9 @@ export class ContactForm extends React.Component {
             onChange={this.handleChange}
           />
           <br />
-          <button type="submit">add contact</button>
+          <button className={s.btnAdd} type="submit">
+            add contact
+          </button>
         </form>
       </div>
     );
